@@ -1,12 +1,12 @@
 <!-- Header -->
 <p align="center">
-  <img src="./assets/header.svg" width="100%" alt="Han Paterka — Senior Software Engineer" />
+  <img src="./assets/header.svg" width="100%" alt="Hannah Paterka — Senior Software Engineer" />
   <img src="./assets/tagline-animation.svg" width="100%" alt="React, TypeScript, healthcare platforms, and business portals" />
 </p>
 
 <!-- City skyline — stat squares + contribution graph -->
 <p align="center">
-  <a href="https://gitcity.natrajx.in/hanpaterka">
+  <a href="https://gitcity.natrajx.in/hannahpaterka">
     <img src="./assets/gitcity-skyline.svg" width="100%" alt="Contribution city skyline with animated stats" />
   </a>
 </p>
@@ -98,11 +98,11 @@ Currently at **Kronos**, building **Java/Spring Boot business portals** for desk
     <img src="./assets/project-cards/bwell.svg" width="100%" alt="Connected Health — B.well enterprise healthcare platform" />
   </a>
   <br /><br />
-  <a href="https://github.com/hanpaterka/busines-portal-readme">
+  <a href="https://github.com/hannahpaterka/busines-portal-readme">
     <img src="./assets/project-cards/business-portal.svg" width="100%" alt="Business Portals — invoicing, maps, and vendor coordination" />
   </a>
   <br /><br />
-  <a href="https://github.com/hanpaterka/busines-portal-readme">
+  <a href="https://github.com/hannahpaterka/busines-portal-readme">
     <img src="./assets/project-cards/kronos.svg" width="100%" alt="Business Management — Spring Boot office and field teams" />
   </a>
 </p>
