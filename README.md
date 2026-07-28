@@ -7,7 +7,7 @@
 <!-- City skyline — stat squares + contribution graph -->
 <p align="center">
   <a href="https://gitcity.natrajx.in/hannahpaterka">
-    <img src="./assets/gitcity-skyline.svg" width="100%" alt="Contribution city skyline with animated stats" />
+    <img src="./assets/gitcity-skyline.svg?v=b7d5684" width="100%" alt="Contribution city skyline with animated stats" />
   </a>
 </p>
 
