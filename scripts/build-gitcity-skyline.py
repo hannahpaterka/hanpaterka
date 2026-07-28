@@ -8,7 +8,7 @@ import re
 import urllib.request
 from pathlib import Path
 
-USERNAME = "hanpaterka"
+USERNAME = "hannahpaterka"
 OUT = Path(__file__).resolve().parents[1] / "assets" / "gitcity-skyline.svg"
 URL = f"https://gitcity.natrajx.in/api/svg?u={USERNAME}&theme=aurora"
 
@@ -47,7 +47,25 @@ def esc(text: str) -> str:
 def fetch_svg(url: str) -> str:
     req = urllib.request.Request(url, headers={"User-Agent": "github-readme-builder"})
     with urllib.request.urlopen(req, timeout=30) as resp:
-        return resp.read().decode("utf-8")
+        svg = resp.read().decode("utf-8")
+    if "could not load skyline" in svg or "Could not fetch contributions" in svg:
+        raise RuntimeError(f"GitCity error for user {USERNAME!r}: {url}")
+    if "<!-- Month labels -->" not in svg:
+        raise RuntimeError("GitCity SVG missing contribution skyline")
+    return svg
+
+
+def parse_contribution_summary(svg: str) -> str | None:
+    match = re.search(
+        r'<text x="20" y="30"[^>]*>([^<]+)</text>',
+        svg,
+    )
+    if not match:
+        return None
+    text = match.group(1).strip()
+    if "contribution" not in text.lower():
+        return None
+    return text
 
 
 def extract_inner(svg: str) -> str:
@@ -513,6 +531,12 @@ def main() -> None:
     raw = fetch_svg(URL)
     inner = extract_inner(raw)
     cards = achievement_cards()
+    contrib = parse_contribution_summary(raw)
+    contrib_markup = ""
+    if contrib:
+        contrib_markup = f"""
+  <text x="{OUT_W - 24:.0f}" y="30" text-anchor="end" fill="#7c3aed"
+    font-family="ui-monospace, Menlo, monospace" font-size="9" font-weight="600">{esc(contrib)}</text>"""
 
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{OUT_W:.0f}" height="{OUT_H:.1f}" viewBox="0 0 {OUT_W:.0f} {OUT_H:.1f}" role="img" aria-label="Contribution city skyline with achievements">
   <defs>
@@ -530,7 +554,7 @@ def main() -> None:
 
   <text x="24" y="30" fill="#111827"
     font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif"
-    font-size="18" font-weight="800" letter-spacing="0.18em">GIT SKYLINE</text>
+    font-size="18" font-weight="800" letter-spacing="0.18em">GIT SKYLINE</text>{contrib_markup}
 {click_me_badge()}
 
   <g clip-path="url(#skyline-clip)">
