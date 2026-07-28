@@ -42,7 +42,7 @@ PROJECTS = [
         "metric_label": "portal delivery",
         "title": "Business Portals",
         "subtitle": "Invoicing, maps & vendor coordination",
-        "url": "https://github.com/hanpaterka/busines-portal-readme",
+        "url": "https://github.com/hannahpaterka/busines-portal-readme",
         "achievements": [
             "Spring Boot portal for invoices, work orders & scheduling",
             "Maps, messaging & vendor tools for field teams",
@@ -58,7 +58,7 @@ PROJECTS = [
         "metric_label": "ops & workflows",
         "title": "Business Management",
         "subtitle": "Spring Boot · office & field teams",
-        "url": "https://github.com/hanpaterka/busines-portal-readme",
+        "url": "https://github.com/hannahpaterka/busines-portal-readme",
         "achievements": [
             "85% fewer data entry errors & support calls via automation",
             "Invoicing, payments, scheduling & job tracking",

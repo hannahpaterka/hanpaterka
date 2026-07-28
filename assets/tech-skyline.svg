@@ -10,11 +10,11 @@
     </filter>
   </defs>
   <rect width="800" height="340" fill="url(#sky)" rx="12"/>
-  <text x="400" y="22" text-anchor="middle" fill="#c4b5fd" font-family="ui-monospace, Menlo, monospace" font-size="11" letter-spacing="0.12em">TECH DISTRICT · hanpaterka</text>
+  <text x="400" y="22" text-anchor="middle" fill="#c4b5fd" font-family="ui-monospace, Menlo, monospace" font-size="11" letter-spacing="0.12em">TECH DISTRICT · hannahpaterka</text>
   <g transform="translate(200, 38)">
 <rect width="400" height="296" rx="12" fill="#030710"/>
   <!-- Header -->
-  <text x="20" y="18" font-family="monospace" font-size="11" font-weight="bold" fill="#a855f7">hanpaterka</text>
+  <text x="20" y="18" font-family="monospace" font-size="11" font-weight="bold" fill="#a855f7">hannahpaterka</text>
   <text x="111" y="18" font-family="monospace" font-size="10" fill="#2a1a50">'s GitCity Skyline</text>
   <text x="20" y="30" font-family="monospace" font-size="8" fill="#2a1a50">171 contributions in the last year</text>
   <!-- Month labels -->

@@ -6,7 +6,7 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 ASSETS="$ROOT/assets"
 mkdir -p "$ASSETS"
 
-curl -sL "https://gitcity.natrajx.in/api/svg?u=hanpaterka&theme=aurora" -o /tmp/gitcity.svg
+curl -sL "https://gitcity.natrajx.in/api/svg?u=hannahpaterka&theme=aurora" -o /tmp/gitcity.svg
 
 encode_icon() {
   curl -sL -A "Mozilla/5.0" "$1" | base64 | tr -d '\n'
@@ -83,7 +83,7 @@ cat > "$ASSETS/tech-skyline.svg" << EOF
     </filter>
   </defs>
   <rect width="800" height="340" fill="url(#sky)" rx="12"/>
-  <text x="400" y="22" text-anchor="middle" fill="#c4b5fd" font-family="ui-monospace, Menlo, monospace" font-size="11" letter-spacing="0.12em">TECH DISTRICT · hanpaterka</text>
+  <text x="400" y="22" text-anchor="middle" fill="#c4b5fd" font-family="ui-monospace, Menlo, monospace" font-size="11" letter-spacing="0.12em">TECH DISTRICT · hannahpaterka</text>
   <g transform="translate(200, 38)">
 ${GITCITY_INNER}
   </g>

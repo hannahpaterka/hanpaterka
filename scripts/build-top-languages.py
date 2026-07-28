@@ -8,7 +8,7 @@ import math
 import urllib.request
 from pathlib import Path
 
-USERNAME = "hanpaterka"
+USERNAME = "hannahpaterka"
 LANG_COUNT = 7
 OUT = Path(__file__).resolve().parents[1] / "assets" / "top-languages.svg"
 
